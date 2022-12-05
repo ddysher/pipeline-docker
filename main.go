@@ -12,7 +12,7 @@ func helloHandler(w http.ResponseWriter, r *http.Request) {
 	for k, v := range r.Header {
 		fmt.Fprintf(w, "  %v=%v\n", k, v)
 	}
-	fmt.Fprintf(w, "Hello world from my Go program!\n")
+	fmt.Fprintf(w, "Hello world from a tiny Go program!\n")
 }
 
 func main() {
@@ -38,5 +38,6 @@ func main() {
 
 	fmt.Println("Listening on :9998/ and 9999/hello")
 
+	// Wait forever.
 	select {}
 }
